@@ -243,7 +243,10 @@ class MyApp extends StatelessWidget {
 **คำถาม**: ถ้าต้องเพิ่มหน้าจอ `FavoritesPage` ที่ต้องแสดงรายการที่บันทึกไว้ชุดเดียวกัน แต่ถูก push แยกออกไปเป็นอีก Route หนึ่ง จะเกิดปัญหาอะไรกับโค้ดแบบ Prop Drilling นี้ จงเขียนคำตอบสั้น ๆ 
 
 ข้อมูลรายการโปรดถูกเก็บใน HomePage แต่ FavoritesPage อยู่คนละ Route จึงเข้าถึงไม่ได้โดยตรงทำให้เกิด Prop Drilling และข้อมูลมีโอกาสไม่ตรงกัน
-```
+
+<img width="1919" height="1024" alt="image" src="https://github.com/user-attachments/assets/f9f49773-4fc2-4e16-89a6-88a5fd2d8242" />
+<img width="1919" height="1025" alt="image" src="https://github.com/user-attachments/assets/8859bbd7-7061-427d-8a36-87cf0ad24c00" />
+<img width="1919" height="1025" alt="image" src="https://github.com/user-attachments/assets/58c6d9a9-715d-4fcc-a0e2-cd3340d5aace" />
 
 ---
 
