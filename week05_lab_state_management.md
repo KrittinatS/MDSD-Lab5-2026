@@ -766,7 +766,7 @@ App State สะดวกเวลาผู้ใช้ต้องการส�
 ทำโจทย์ที่ 1 และ 2 ซ้ำอีกครั้งในโปรเจกต์ทดลอง Riverpod (ส่วนที่ 4) 
 
 > ✅ **Checkpoint 5.1** ถ่ายภาพหน้าจอฟีเจอร์ค้นหาที่กรองสินค้าได้ถูกต้อง และภาพ Dialog ยืนยันการล้างรายการโปรด เขียนอธิบายเหตุผลการเลือกชนิด State ของทั้งสองฟีเจอร์ ในช่องด้านล่าง
-```text
+<img width="1919" height="964" alt="image" src="https://github.com/user-attachments/assets/51002044-b236-48ce-a43f-f96027648da6" />
+<img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/1127a38b-4c90-4186-9e77-20613f4aa04c" />
+<img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/db2054dd-94e3-493c-bc94-383c5e6e0b44" />
 
-
-```
