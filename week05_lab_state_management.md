@@ -722,10 +722,15 @@ class HomePage extends ConsumerWidget {
 <img width="1919" height="1023" alt="image" src="https://github.com/user-attachments/assets/8a8a71e2-18a6-46d7-ad99-72bacc798d02" />
 
 State class |	ChangeNotifier |	StateNotifier<List<Item>>
+
 Provider registration |	ChangeNotifierProvider |	StateNotifierProvider
+
 การอ่านค่าเพื่อแสดงผล |	context.watch<T>() |	ref.watch(...)
+
 การเรียกเมธอดแบบครั้งเดียว |	context.read<T>() |	ref.read(...)
+
 Widget สำหรับรับ ref |	StatelessWidget / StatefulWidget |	ConsumerWidget
+
 การครอบแอปที่ root |	ChangeNotifierProvider |	ProviderScope
 
 ## ส่วนที่ 5 (ทำด้วยตนเอง): ออกแบบฟีเจอร์เพิ่มด้วยตัวเอง
