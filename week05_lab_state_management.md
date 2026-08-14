@@ -528,7 +528,30 @@ class HomePage extends StatelessWidget {
 บันทึกคำตอบที่ได้จาก Gemini 
 
 ```text
-
+1. Dark Mode / Light Mode (Global Theme)
+เครื่องมือที่แนะนำ: Riverpod (หรือ Provider)
+เหตุผล:
+Global Scope: การเปลี่ยน Theme ส่งผลกระทบต่อ ทุกหน้าจอ ในแอป จึงต้องมี State ที่อยู่เหนือ Widget Tree ทั้งหมด
+Ease of Use: Riverpod ช่วยให้คุณเข้าถึงค่า Theme ได้จากทุกที่โดยไม่ต้องส่งผ่าน Constructor (Prop Drilling)
+Persistence: เมื่อใช้ร่วมกับ SharedPreferences เพื่อจำค่าที่ผู้ใช้เลือกไว้ Riverpod จะจัดการเรื่องการโหลดและอัปเดตสถานะตอนเปิดแอปได้สะอาดตาที่สุด
+2. ตัวนับ "มีคนถูกใจ" (Synced State)
+เครื่องมือที่แนะนำ: Riverpod (หรือ Provider)
+เหตุผล:
+Single Source of Truth: เมื่อคุณกดถูกใจใน "หน้ารายละเอียด" ข้อมูลใน "หน้ารายการ" ต้องเปลี่ยนตามทันที ทั้งสองหน้าจึงต้องดึงข้อมูลมาจาก แหล่งเดียวกัน
+Cross-Page Sync: การใช้ setState ไม่สามารถส่งค่าข้าม Route (หน้าจอ) ได้อย่างมีประสิทธิภาพ การใช้ State Management ส่วนกลางจะช่วยจัดการเรื่อง "ความซิงค์" ของข้อมูลได้แม่นยำกว่า
+3. Animation ไอคอนหัวใจ (Local UI State)
+เครื่องมือที่แนะนำ: setState (ใน StatefulWidget)
+เหตุผล:
+Ephemeral State: เป็น State ระยะสั้นที่เกิดขึ้นและจบลงภายใน Widget เดียว (Local) ไม่มีความจำเป็นต้องให้ Widget อื่นรับรู้
+Performance: การใช้ AnimationController คู่กับ setState (หรือ AnimatedBuilder) ภายในตัว Widget เองมีประสิทธิภาพสูงกว่า เพราะไม่ต้องไปรบกวนระบบจัดการ State ส่วนกลางให้ทำงานเกินความจำเป็น
+Simplicity: เขียนโค้ดสั้นและตรงไปตรงมาที่สุดสำหรับ UI Logic ที่ไม่เกี่ยวกับ Business Data
+สรุปคำแนะนำ (Architecture Strategy)
+ฟีเจอร์	เครื่องมือ	ระดับของ State
+1. Dark/Light Mode	Riverpod	App-wide (Global)
+2. Like Counter	Riverpod	Feature/Data (Shared)
+3. Like Animation	setState	Widget (Local)
+คำแนะนำเพิ่มเติม:
+หากคุณเริ่มโปรเจกต์ใหม่ Riverpod คือตัวเลือกที่ยืดหยุ่นและปลอดภัยกว่า Provider (ลดปัญหา runtime error) ส่วน setState ให้เก็บไว้ใช้กับเรื่องเล็กๆ น้อยๆ เช่น การควบคุม Animation, การเปลี่ยนสีปุ่มชั่วคราว หรือการเปิด/ปิด TextField ในหน้านั้นๆ ครับ
 ```
 
 
