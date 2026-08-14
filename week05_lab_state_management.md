@@ -527,7 +527,7 @@ class HomePage extends StatelessWidget {
 
 บันทึกคำตอบที่ได้จาก Gemini 
 
-```text
+
 1. Dark Mode / Light Mode (Global Theme)
 เครื่องมือที่แนะนำ: Riverpod (หรือ Provider)
 เหตุผล:
@@ -552,7 +552,7 @@ Simplicity: เขียนโค้ดสั้นและตรงไปต�
 3. Like Animation	setState	Widget (Local)
 คำแนะนำเพิ่มเติม:
 หากคุณเริ่มโปรเจกต์ใหม่ Riverpod คือตัวเลือกที่ยืดหยุ่นและปลอดภัยกว่า Provider (ลดปัญหา runtime error) ส่วน setState ให้เก็บไว้ใช้กับเรื่องเล็กๆ น้อยๆ เช่น การควบคุม Animation, การเปลี่ยนสีปุ่มชั่วคราว หรือการเปิด/ปิด TextField ในหน้านั้นๆ ครับ
-```
+
 
 
 ### ขั้นตอนที่ 3.2: ประเมินคำตอบของ AI
